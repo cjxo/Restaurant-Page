@@ -20,6 +20,8 @@ export default function renderContact() {
         createDescCard("Chef", createContact("987-654-321", "looCsItcejorPnidOehT@ssencipe.moc")),
         createDescCard("Owner", createContact("824-218-510", "WhatIsAGoodEmail@questionmark.com")),
         createDescCard("Son Of Owner", createContact("219-120-321", "UnrealisticEmployee@what.com")),
+        createDescCard("Granddaughter of Owner", createContact("123-021-912", "eeyolpmEcitsilaernU@tahw.moc")),
+        createDescCard("Waitress", createContact("123-999-000", "Bruh@whatisthis.com")),
     )
     return [divContact];
 }

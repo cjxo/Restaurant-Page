@@ -59,7 +59,7 @@ nav {
 		border-radius: 8px;
 	}
 
-	button:hover {
+	button:hover, button.toggled {
 		color: black;
 		background-color: hsl(39, 84%, 74%);
 		box-shadow: 0px 2px 4px hsl(39, 95%, 67%);
@@ -80,16 +80,16 @@ nav {
 	justify-content: space-around;
 }
 
+.images {
+	display: flex;
+	align-items: center;
+}
+
 #content {
 	max-width: var(--max-width-per-container);
 	flex-grow: 1;
 	display: flex;
 	padding: 16px;
-
-	.images {
-		display: flex;
-		align-items: center;
-	}
 
 	.description {
 		display: flex;
@@ -117,13 +117,80 @@ nav {
 	border: 1px solid hsl(39, 84%, 74%);
 	box-shadow: 1px 1px 8px hsl(39, 90%, 65%);
 
+	/* this is divContent in util.js */
 	div {
 		display: flex;
 		justify-content: center;
-		ul {
+		.side-by-side-container ul, ul {
 			flex-direction: column;
 		}
+
+		.menu-container {
+			flex-grow: 1;
+
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.list-container {
+			display: flex;
+			flex-direction: column;
+			flex-basis: 50%;
+			flex-shrink: 1;
+			.name-and-price {
+				display: flex;
+				justify-content: space-between;
+				width: 100%;
+				font-size: 18px;
+				> div:nth-child(1) {
+					font-style: italic;
+					color: hsl(24, 95%, 30%);
+				}
+			}
+
+			.food-description {
+				color:  hsl(24, 70%, 60%);
+			}
+
+			ul {
+				gap: 16px;
+			}
+
+			li {
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+				width: 500px;
+			}
+		}
+
+		.menu-images {
+			flex-basis: 50%;
+			flex-wrap: wrap;
+			justify-content: flex-start;
+			align-content: flex-start;
+			gap: 12px;
+			
+			.image-number-pair {
+				display: flex;
+				flex-direction: column;
+
+				img {
+					border-radius: 8px;
+					width: 200px;
+					height: auto;
+				}
+			}
+		}
 	}
+}
+
+.menu {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	flex-grow: 1;
+	gap: 16px;
 }
 
 .contact {
