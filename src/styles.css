@@ -1,0 +1,133 @@
+@font-face {
+	font-family: angelina-font;
+	src: url("./Angelina-rnlA.otf");
+}
+
+@font-face {
+	font-family: amanda-black;
+	src: url("./AnandaBlackPersonalUseRegular-rg9Rx.ttf");
+}
+
+:root {
+	--max-width-per-container: 1300px;
+}
+
+body {
+	margin: 0;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	background-color: #f7ebd4;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+	display: flex;
+}
+
+li {
+	list-style-type: none;
+}
+
+button {
+	border: none;
+	cursor: pointer;
+}
+
+.nav-wrapper {
+	background-color: hsl(39, 77%, 83%);
+	display: flex;
+	justify-content: center;
+}
+
+nav {
+	display: flex;
+	align-items: center;
+	max-width: var(--max-width-per-container);
+	flex-grow: 1;
+
+	.logo {
+		font-size: 48px;
+		font-family: amanda-black;
+		margin-right: auto;
+	}
+
+	button {
+		color: #444444;
+		background-color: inherit;
+		font-size: 20px;
+		padding: 8px 16px;
+		border-radius: 8px;
+	}
+
+	button:hover {
+		color: black;
+		background-color: hsl(39, 84%, 74%);
+		box-shadow: 0px 2px 4px hsl(39, 95%, 67%);
+	}
+
+	button:active {
+		box-shadow: 0px 2px 4px hsl(46, 95%, 45%);
+	}
+
+	ul {
+		gap: 16px;
+	}
+}
+
+.content-wrapper {
+	background-color: #f7ebd4;
+	display: flex;
+	justify-content: space-around;
+}
+
+#content {
+	max-width: var(--max-width-per-container);
+	flex-grow: 1;
+	display: flex;
+	padding: 16px;
+
+	.images {
+		display: flex;
+		align-items: center;
+	}
+
+	.description {
+		display: flex;
+		flex-direction: column;
+		padding: 16px;
+		gap: 16px;
+		
+		.desc-card {
+			box-sizing: border-box;
+			padding: 24px;
+			border-radius: 12px;
+			line-height: 1.8;
+			background-color: hsl(34, 85%, 87%);
+			border: 1px solid hsl(39, 84%, 74%);
+			box-shadow: 1px 1px 8px hsl(39, 90%, 65%);
+
+			.desc-header {
+				font-family: amanda-black;
+				margin-bottom: 16px;
+				font-size: 24px;
+				text-align: center;
+				text-decoration: underline;
+				text-underline-offset: 8px;
+			}
+
+			div {
+				display: flex;
+				justify-content: center;
+				ul {
+					flex-direction: column;
+				}
+			}
+		}
+	}
+}
+
+.footer {
+	text-align: center;
+	padding: 16px;
+	background-color: #f7ebd4;
+}
